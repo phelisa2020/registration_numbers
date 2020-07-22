@@ -19,6 +19,30 @@ body {
 	flex: 1;
 }
 
+.regNumberEntered {
+	/* margin: 1em; */
+	padding: 2em;
+	border-radius: 1em;
+	font-size: 1em;
+}
+
+.btn {
+	margin: 1em;
+	padding: 1em;
+	font-size: 1em;
+	display: right
+	border-radius: 0.25em;
+}
+
+.blue {
+	background-color: dodgerblue;
+}
+
+.message {
+	height: 1em;
+	font-weight: bold;
+	color: crimson;
+}
 
 .regNumber {
 
@@ -34,3 +58,9 @@ body {
 
 }
 
+input[type='radio'] {
+	margin: 1em;
+}
+input[type='text'] {
+	margin: 1em;
+}
