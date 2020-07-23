@@ -6,6 +6,7 @@ const message = document.querySelector(".message");
 
 const regNumbersEntered = [];
 
+
 addRegNumberBtn.addEventListener("click", function() {
 	const townElem = document.querySelector("input[name='town']:checked");
 	
@@ -40,7 +41,9 @@ if(!regNumbersEntered.includes(currentRegNumber)){
 
 }
 
-
+window.addEventListener('load', function(){
+	regNumberElem.innerHTML = currentRegNumber
+})
 
 	//regNumber.innerHTLM = regNumberEntered.value
 
