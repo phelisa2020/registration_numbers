@@ -3,21 +3,19 @@ body {
 	font-size: 1em;
 }
 
-
 .container {
-	width: 90%;
-	margin:	auto;
-	
+	margin: auto;
+	width: 50%;
 }
 
-.parts {
+/*.parts {
 	display: flex;
 	margin-right: 2em;
-}
+}*/
 
-.parts div {
+/*.parts div {
 	flex: 1;
-}
+}*/
 
 .regNumberEntered {
 	/* margin: 1em; */
@@ -30,8 +28,9 @@ body {
 	margin: 1em;
 	padding: 1em;
 	font-size: 1em;
-	display: right
+	/*display: right*/
 	border-radius: 0.25em;
+	float: right;
 }
 
 .blue {
@@ -54,7 +53,7 @@ body {
 	width: 7em;
 	text-align: center;
 	font-weight: bold;
-	float: left;
+	
 
 }
 

@@ -7,6 +7,8 @@ const message = document.querySelector(".message");
 const regNumbersEntered = [];
 
 addRegNumberBtn.addEventListener("click", function() {
+	const townElem = document.querySelector("input[name='town']:checked");
+	
 //if nothing entered shows blank
 		const currentRegNumber = regNumberEntered.value.toUpperCase();
 if(currentRegNumber.startsWith('CY') ||
@@ -27,11 +29,19 @@ if(!regNumbersEntered.includes(currentRegNumber)){
 	regNumbersEntered.push(currentRegNumber)
 
 	// regNumberEntered.value;....it was this before
-} 
+
+ 
+
+ } else {
+	message.innerHTML = 'The registration number already exist.';
+}
 } else {
-	message.innerHTML = '';
+	message.innerHTML = 'Invalid registration number';
 
 }
+
+
+
 	//regNumber.innerHTLM = regNumberEntered.value
 
 });
