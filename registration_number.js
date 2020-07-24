@@ -6,6 +6,9 @@ const message = document.querySelector(".message");
 const filterBtnElem = document.querySelector('.filterBtn')
 
 const regNumbersEntered = [];
+// window.addEventListener('load', function(){
+// 	regNumberElem.innerHTML = currentRegNumber
+// })
 
 
 addRegNumberBtn.addEventListener("click", function() {
@@ -18,7 +21,6 @@ if(currentRegNumber.startsWith('CY') ||
 	currentRegNumber.startsWith('CA') ||
 	currentRegNumber.startsWith('CJ')) {
 
-message.innerHTML = '';
 
 if(!regNumbersEntered.includes(currentRegNumber)){
 	// regNumberEntered.value;....it was this before
@@ -43,15 +45,13 @@ alert(currentRegNumber)
 
 }
 
-window.addEventListener('load', function(){
-	regNumberElem.innerHTML = currentRegNumber
-})
+
 
 	
 });
-function filter(){
+function filter(currentRegNumber){
 		const townElem = document.querySelector("input[name='town']:checked");
-		const currentRegNumber = townElem.value
+		const town = townElem.value
 		alert(regNumberEntered.length)
 		var array = [];
 		for (var i=0; i<regNumberEntered.length; i++){
@@ -61,6 +61,7 @@ function filter(){
 			}
 		}
 		alert(array)
+		return array
 
 	}
 
