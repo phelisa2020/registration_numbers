@@ -6,66 +6,52 @@ const message = document.querySelector(".message");
 const filterBtnElem = document.querySelector('.filterBtn')
 
 const regNumbersEntered = [];
-// window.addEventListener('load', function(){
-// 	regNumberElem.innerHTML = currentRegNumber
-// })
-
 
 addRegNumberBtn.addEventListener("click", function() {
 	const townElem = document.querySelector("input[name='town']:checked");
 
-	
-//if nothing entered shows blank
-		const currentRegNumber = regNumberEntered.value.toUpperCase();
+	const currentRegNumber = regNumberEntered.value.toUpperCase();
 if(currentRegNumber.startsWith('CY') ||
 	currentRegNumber.startsWith('CA') ||
 	currentRegNumber.startsWith('CJ')) {
 
-
-if(!regNumbersEntered.includes(currentRegNumber)){
-	// regNumberEntered.value;....it was this before
-
-	const regNumberElem = document.createElement('li');
-	regNumberElem.classList.add('regNumber');
-	regNumberElem.innerHTML = currentRegNumber
-	// regNumberEntered.value;....it was this before
-	regNumbers.appendChild(regNumberElem);
-
+	if(!regNumbersEntered.includes(currentRegNumber)){
+	name(currentRegNumber)
 	regNumbersEntered.push(currentRegNumber)
-alert(currentRegNumber)
-	// regNumberEntered.value;....it was this before
-
- 
-
- } else {
+	
+} else {
 	message.innerHTML = 'The registration number already exist.';
 }
 } else {
 	message.innerHTML = 'Invalid registration number';
 
 }
-
-
-
-	
 });
+
+function name(number){
+	const regNumberElem = document.createElement('li');
+	regNumberElem.classList.add('regNumber');
+	regNumberElem.innerHTML = number
+	regNumbers.appendChild(regNumberElem);
+}
+
 function filter(currentRegNumber){
-		const townElem = document.querySelector("input[name='town']:checked");
-		const town = townElem.value
-		alert(regNumberEntered.length)
-		var array = [];
-		for (var i=0; i<regNumberEntered.length; i++){
-			let arrays = regNumberEntered[i];
-			if(arrays.startsWith(currentRegNumber)){
-				array.push(arrays)
+	regNumbers.innerHTML = ''
+	const townElem = document.querySelector("input[name='town']:checked");
+	const town = townElem.value
+	alert(town)
+	var array = [];
+	for (var i=0; i<regNumbersEntered.length; i++){
+		let currentValue = regNumbersEntered[i];
+			if(currentValue.startsWith(town)){
+				array.push(currentValue)
 			}
 		}
-		alert(array)
-		return array
-
+		for (var i=0; i<array.length; i++){
+			name(array[i])
+		}
+		
 	}
 
-filterBtnElem.addEventListener("click", filter);
-// addRegNumberBtn.addEventListener("click", filter)
-
+	filterBtnElem.addEventListener("click", filter);
 
