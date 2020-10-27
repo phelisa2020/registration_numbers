@@ -45,5 +45,3 @@ if(!regNumbersEntered.includes(currentRegNumber)){
 	//regNumber.innerHTLM = regNumberEntered.value
 
 });
-
-

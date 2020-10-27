@@ -17,4 +17,3 @@ if(!regNumbersEntered.includes(currentRegNumber)){
 		regNumbers
 	}
 }
-
